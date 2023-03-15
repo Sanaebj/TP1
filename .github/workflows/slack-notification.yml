@@ -11,8 +11,8 @@ jobs:
       - name: Send Slack Notification
         uses: 8398a7/action-slack@v3
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }} 
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} 
         with:
           status: ${{ job.status }}
           text: Workflow has completed with status ${{ job.status }}!
-          args: '{"text": "Changes have been made to the repository!"}'
+          args: '{"text": "Changes have been made to the repository!"}'
